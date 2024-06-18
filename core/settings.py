@@ -93,6 +93,12 @@ DATABASES = {
     }
 }
 
+DATABASE_URL = 'postgres://kingstore_admin:u2gBYjR6WKVt5aboZur3KgdgdOLAAI5s@dpg-cpoub92j1k6c73b2h5pg-a.oregon-postgres.render.com/kingstore_db'
+
+import dj_database_url
+
+DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
+
 
 
 # Password validation
