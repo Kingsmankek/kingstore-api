@@ -15,16 +15,16 @@ class RegionSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    categoryId = serializers.PrimaryKeyRelatedField(
+    category = serializers.PrimaryKeyRelatedField(
         queryset=Category.objects.all())
-    regionId = serializers.PrimaryKeyRelatedField(queryset=Region.objects.all())
+    region = serializers.PrimaryKeyRelatedField(queryset=Region.objects.all())
     image = serializers.ImageField(
         write_only=True, required=False, allow_null=True)
 
     class Meta:
         model = Product
         fields = ['id', 'name', 'description', 'price', 'stockQuantity',
-                  'createdAt', 'updatedAt', 'categoryId', 'regionId', 'image']
+                  'createdAt', 'updatedAt', 'category', 'region', 'image']
         
     def create(self, validated_data):
         image_data = validated_data.pop('image', None)

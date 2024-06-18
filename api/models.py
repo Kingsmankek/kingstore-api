@@ -32,9 +32,9 @@ class Product(models.Model):
     stockQuantity = models.IntegerField()
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
-    categoryId = models.ForeignKey(
+    category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products')
-    regionId = models.ForeignKey(
+    region = models.ForeignKey(
         Region, on_delete=models.CASCADE, related_name='products')
     image = models.BinaryField(null=True, blank=True)
     
