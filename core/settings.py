@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jiji',
-        'USER': 'postgres',
-        'PASSWORD': 'pass123',
-        'HOST': 'localhost',
+        'NAME': 'kingstore_db',
+        'USER': 'kingstore_admin',
+        'PASSWORD': 'u2gBYjR6WKVt5aboZur3KgdgdOLAAI5s',
+        'HOST': 'u2gBYjR6WKVt5aboZur3KgdgdOLAAI5s@dpg-cpoub92j1k6c73b2h5pg-a',
         'PORT': '5432',
     }
 }
