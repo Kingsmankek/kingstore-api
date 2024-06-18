@@ -36,7 +36,7 @@ class ProductSerializer(serializers.ModelSerializer):
         
 
 class CartSerializer(serializers.ModelSerializer):
-    product = ProductSerializer()
+    product = serializers.PrimaryKeyRelatedField(queryset=Cart.objects.all())
 
     class Meta:
         model = Cart
